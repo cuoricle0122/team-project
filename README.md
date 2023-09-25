@@ -65,7 +65,7 @@
 
     11. 프론트엔드 및 UI 개발
 
-# 💻 프로젝트 구조
+# 💻 아키텍쳐
     ◎ config (설정 클래스)
         - SecurityConfig (보안 설정)
         - MvcConfig (Spring MVC 설정)
