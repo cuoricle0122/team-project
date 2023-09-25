@@ -16,7 +16,25 @@
     보다 만족할 수 있는 선택을 하도록 돕습니다.
 
 # 💻 개발 환경 및 사용된 기술
-    (추후 작성 예정)
+    ㅇ 프로그래밍 언어
+    Java, JavaScript
+    
+    ㅇ 개발 도구
+    IntelliJ, Git
+
+    ㅇ 프레임워크 및 라이브러리
+    Spring Boot, Lombok
+    
+    ㅇ 데이터베이스
+    MySQL
+    
+    ㅇ ORM / Database tool
+    JPA/Hibernate, MyBatis
+    
+    ㅇ 서버 및 배포 환경
+    
+    ㅇ 빌드 도구
+    Maven
 
 # 💻 설계 고려사항 정리
     1. 사용자 인증 및 권한 관리
