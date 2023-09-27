@@ -18,10 +18,10 @@ public class Menu {
         // 회원 하위 메뉴
         if (code.equals("member")) {
             menus.add(new MenuDetail("member", "회원 목록", "/admin/member"));
-        } else if (code.equals("product")) { // 상품관리 하위 메뉴
-            menus.add(new MenuDetail("product", "상품 목록", "/admin/product"));
-            menus.add(new MenuDetail("add", "상품 등록", "/admin/product/add"));
-            menus.add(new MenuDetail("category", "상품 분류", "/admin/product/category"));
+        } else if (code.equals("rooms")) { // 객실 관리 하위 메뉴
+            menus.add(new MenuDetail("rooms", "객실 현황", "/admin/rooms"));
+            menus.add(new MenuDetail("add", "객실 등록", "/admin/rooms/add"));
+            menus.add(new MenuDetail("category", "객실 분류", "/admin/rooms/category"));
         }
         return menus;
     }
