@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org"
+      xmlns:sec="http://www.thymeleaf.org/extras/spring-security">
+
+<header th:fragment="common">
+
+    <section class="left">
+        <a th:href="@{#}">호캉스홀릭</a>
+    </section>
+
+    <section class="right">
+        <ul class="nav">
+            <!-- 호텔검색 -->
+            <li class="over"><a href="#">호텔검색</a>
+                <ul class='submenu'>
+                    <li><a th:href="@{#}">종합 검색</a></li>
+                    <li><a th:href="@{#}">등급별 호텔검색</a></li>
+                    <li><a th:href="@{#}">지역/도시별 호텔검색</a></li>
+                    <li><a th:href="@{#}">테마별 호텔검색</a></li>
+                    <li><a th:href="@{#}">특별할인 및 이벤트</a></li>
+                </ul>
+            </li>
+
+            <!-- 이벤트 -->
+            <li><a th:href="@{/#}">이벤트</a></li>
+
+            <!-- 마이페이지 -->
+            <li class="over"><a href="#">MyPage</a>
+                <ul class='submenu'>
+                    <li><a th:href="@{#}">개인정보수정</a></li>
+                    <li><a th:href="@{#}">예약내역</a></li>
+                    <li><a th:href="@{#}">결제내역</a></li>
+                    <li><a th:href="@{#}">마일리지/적립금</a></li>
+                    <li><a th:href="@{#}">위시리스트</a></li>
+                </ul>
+            </li>
+
+            <!-- 로그인/로그아웃 -->
+            <th:block sec:authorize="isAuthenticated()">
+                <li><a th:href="@{#}">로그아웃</a></li>
+            </th:block>
+            <th:block sec:authorize="isAnonymous()">
+                <li><a th:href="@{#}">로그인</a></li>
+            </th:block>
+
+            <!-- 고객센터 -->
+            <li class="over"><a href="#">고객센터</a>
+                <ul class='submenu'>
+                    <li><a th:href="@{#}">공지사항</a></li>
+                    <li><a th:href="@{#}">FAQ</a></li>
+                    <li><a th:href="@{#}">문의하기</a></li>
+                    <li><a th:href="@{#}">신고</a></li>
+                </ul>
+            </li>
+        </ul>
+    </section>
+</header>
+</html>
+
