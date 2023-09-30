@@ -83,7 +83,11 @@
 
     11. 프론트엔드 및 UI 개발
 
+<<<<<<< HEAD
+# 💻 아키텍쳐
+=======
 # 💻 아키텍처(프로젝트 구조) 안내
+>>>>>>> 57cbd0f7104209ed6b504e5ae0ea52807497449f
     ◎ config (설정 클래스)
         - SecurityConfig (보안 설정)
         - MvcConfig (Spring MVC 설정)
