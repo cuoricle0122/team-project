@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+    <th:block th:fragment="form">
+        <table class="table-cols">
+            <tr>
+                <th>객실분류</th>
+                <td></td>
+            </tr>
+            <tr>
+                <th>객실명</th>
+                <td>
+                    <input type="text" name="roomNm">
+                </td>
+            </tr>
+            <tr>
+                <th>기본금액</th>
+                <td>
+                    <input type="number" name="basicPrice">원
+                </td>
+            </tr>
+            <tr>
+                <th>추가금액</th>
+                <td>
+                   한명당 <input type="number" name="addPrice">원 추가
+                </td>
+            </tr>
+            <tr>
+               <th>인원수</th>
+               <td>
+                   기본 <input type="number" name="capacity">인실 /
+                   최대 <input type="number" name="maxCapacity">인실
+               </td>
+            </tr>
+            <tr>
+                <th>목록 이미지</th>
+                <td></td>
+            </tr>
+            <tr>
+                <th>메인 이미지</th>
+                <td></td>
+            </tr>
+            <tr>
+                <th>객실 설명</th>
+                <td>
+                    <textarea name="description"></textarea>
+                </td>
+            </tr>
+        </table>
+    </th:block>
+</html>
