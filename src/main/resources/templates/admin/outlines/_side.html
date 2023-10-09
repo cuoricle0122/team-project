@@ -9,6 +9,18 @@
             </a>
         </li>
         <li>
+            <a th:href="@{/admin/dashboard}" th:classappend="${menuCode} == 'dashboard' ? 'on'">
+                <i class="xi-users-o"></i>
+                대시보드
+            </a>
+        </li>
+        <li>
+            <a th:href="@{/admin/reservations}" th:classappend="${menuCode} == 'reservations' ? 'on'">
+                <i class="xi-users-o"></i>
+                예약 관리
+            </a>
+        </li>
+        <li>
             <a th:href="@{/admin/member}" th:classappend="${menuCode} == 'member' ? 'on'">
                 <i class="xi-users-o"></i>
                 회원 관리
