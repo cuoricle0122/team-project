@@ -1,0 +1,57 @@
+/* 미완성 */
+
+/* 공통스타일 */
+.left a {
+  text-decoration: none;
+  color: #000;
+}
+
+.right .nav {
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+}
+
+.right .nav > li {
+  display: inline-block;
+}
+
+.right .nav > li > a {
+  text-decoration: none;
+  color: #000;
+}
+
+.submenu {
+  display: none;
+}
+
+.over:hover .submenu {
+  display: block;
+}
+
+/* 헤더스타일 */
+header {
+    background-color: red;
+    padding: 10px;
+    color: white;
+}
+
+.left a:hover,
+.left a:focus,
+.left a.active {
+    background-color:#fff;
+    color:#000;
+}
+
+.submenu li a:hover,
+.submenu li a:focus,
+.submenu li a.active {
+     background-color:#fff;
+     color:#000;
+}
+
+body {
+   font-family:'Arial', sans-serif;
+   margin:0;
+   padding-top:50px;
+}
