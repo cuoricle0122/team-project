@@ -1,15 +1,58 @@
 <!DOCTYPE html>
 <html xmlns:th="http://www.thymeleaf.org"
-        xmlns:sec="http://www.thymeleaf.org/extras/spring-security">
+      xmlns:sec="http://www.thymeleaf.org/extras/spring-security">
+
 <header th:fragment="common">
-    <th:block sec:authorize="isAnonymous()">
-        <a th:href="@{/member/join}" th:text="#{title.join}"></a>
-        <a th:href="@{/member/login}" th:text="#{title.login}"></a>
-    </th:block>
-    <th:block sec:authorize="isAuthenticated()">
-        <span th:text="${#messages.msg('login.msg', session.userInfo.userNm, session.userInfo.email)}"></span>
-        <a th:href="@{/member/logout}" th:text="#{title.logout}"></a>
-        <a sec:authorize="hasAuthority('ADMIN')" th:href="@{/admin}" th:text="#{title.siteAdmin}"></a>
-    </th:block>
+
+    <section class="left">
+        <a th:href="@{#}">호캉스홀릭</a>
+    </section>
+
+    <section class="right">
+        <ul class="nav">
+            <!-- 호텔검색 -->
+            <li class="over"><a href="/front/layouts/hotelSearch">호텔검색</a>
+                <ul class='submenu'>
+                    <li><a th:href="@{/front/layouts/hotelSearch/combineSearchPage.html}">종합 검색</a></li>
+                    <li><a th:href="@{/front/layouts/hotelSearch/gradeSearchPage}">등급별 호텔검색</a></li>
+                    <li><a th:href="@{/front/layouts/hotelSearch/locationSearchPage}">지역/도시별 호텔검색</a></li>
+                    <li><a th:href="@{/front/layouts/hotelSearch/themeSearchPage}">테마별 호텔검색</a></li>
+                    <li><a th:href="@{/front/layouts/hotelSearch/eventPage}">특별할인 및 이벤트</a></li>
+                </ul>
+            </li>
+
+            <!-- 이벤트 -->
+            <li><a th:href="@{/front/layouts/event/event}">이벤트</a></li>
+
+            <!-- 마이페이지 -->
+            <li class="over"><a href="/front/layouts/myPage">MyPage</a>
+                <ul class='submenu'>
+                    <li><a th:href="@{/front/layouts/myPage/myAccountSetting}">개인정보수정</a></li>
+                    <li><a th:href="@{/front/layouts/myPage/myReservation}">예약내역</a></li>
+                    <li><a th:href="@{/front/layouts/myPage/myPaymentHistory}">결제내역</a></li>
+                    <li><a th:href="@{/front/layouts/myPage/myRewards}">마일리지/적립금</a></li>
+                    <li><a th:href="@{/front/layouts/myPage/wishlist}">위시리스트</a></li>
+                </ul>
+            </li>
+
+            <!-- 로그인/로그아웃 -->
+            <th:block sec:authorize="isAuthenticated()">
+                <li><a th:href="@{#}">로그아웃</a></li>
+            </th:block>
+            <th:block sec:authorize="isAnonymous()">
+                <li><a th:href="@{#}">로그인</a></li>
+            </th:block>
+
+            <!-- 고객센터 -->
+            <li class="over"><a href="/front/layouts/cs">고객센터</a>
+                <ul class='submenu'>
+                    <li><a th:href="@{/front/layouts/cs}">공지사항</a></li>
+                    <li><a th:href="@{/front/layouts/faq}">FAQ</a></li>
+                    <li><a th:href="@{/front/layouts/customerInquiry}">문의하기</a></li>
+                    <li><a th:href="@{/front/layouts/report}">신고</a></li>
+                </ul>
+            </li>
+        </ul>
+    </section>
 </header>
 </html>
