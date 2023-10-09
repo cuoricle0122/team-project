@@ -24,6 +24,7 @@ public class HotelSearchController {
     }
 
     // 종합 검색 페이지
+
     @GetMapping("/front/layouts/hotelSearch/combineSearchPage")
     public String combinedSearchPage(Model model) {
         // List<String> grades = Arrays.asList("1 star", "2 stars", "3 stars", "4 stars", "5 stars", "First class", "Special class");
